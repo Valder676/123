@@ -1,0 +1,120 @@
+/* Общие стили для приложения */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
+  color: #abb2bf;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.app {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #3c4049;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Стили для формы добавления задач */
+form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  background: #20232a;
+  border: 1px solid #40454f;
+  border-radius: 15px;
+  font-size: 18px;
+  color: #61dafb;
+}
+
+button {
+  padding: 12px 24px;
+  background-image: linear-gradient(45deg, #61dafb 30%, #ff6f91 90%);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+/* Стили для списка задач */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: #20232a;
+  color:#e0567d;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.task-item:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.task-item.completed {
+  color: #56c7b2;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #0056f5;
+}
+
+.task-title {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-item button {
+  background: none;
+  color: #ff6f91;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.task-item button:hover {
+  color: #e0567d;
+}
+
+/* Иконки для кнопок */
+.task-item button.edit-btn:before {
+  content: '✎';
+  margin-right: 5px;
+}
+
+.task-item button.delete-btn:before {
+  content: '✖';
+  margin-right: 5px;
+}
